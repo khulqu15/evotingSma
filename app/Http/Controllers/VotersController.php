@@ -61,7 +61,7 @@ class VotersController extends Controller
                 $code_verify = Str::random(4);
                 $voter->email_verify = $code_verify;
                 $voter->save();
-                return redirect()->route('verifikasi.index', ['id' => $voter->id]);
+                return redirect()->route('vote', ['id' => $voter->id, 'name' => str_replace(' ', '_', $voter->name)]);
             }
             else {
                 $voter->save();
