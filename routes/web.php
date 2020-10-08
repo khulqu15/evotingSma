@@ -38,6 +38,7 @@ Route::get('voted/user', [VotersController::class, 'votedUser'])->name('voted.us
 // private login
 Route::get('private/login', [PageController::class, 'loginPage'])->name('login.index');
 Route::post('private/login', [AuthController::class, 'login'])->name('login.post');
+Route::get('user/login', [AuthController::class, 'redirectLogin'])->name('login.redirect');
 
 // dashboard
 Route::get('admin/dashboard', [AuthController::class, 'admin'])->name('admin.dashboard');
