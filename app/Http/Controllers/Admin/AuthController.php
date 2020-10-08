@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+
+    public function redirectLogin()
+    {
+        return redirect()->route('login.index');
+    }
+
     public function login(Request $request)
     {
         if(Auth::attempt($request->only('email', 'password'))) {
