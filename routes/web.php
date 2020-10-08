@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('index');
+Route::get('index', [PageController::class, 'index'])->name('index');
 Route::get('start', [PageController::class, 'form'])->name('form');
 Route::post('user/voting', [VotersController::class, 'store'])->name('voters.create');
 
