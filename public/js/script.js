@@ -16,5 +16,7 @@ $(document).ready(function() {
     $('#closable-visi-misi').click(function() {
         $('#visi-misi').removeClass('overlay-show')
         $('body').removeClass('overflow-hidden')
+        $('#visi-text').html('Mohon tunggu sebentar...')
+        $('#misi-text').html('Mohon tunggu sebentar...')
     })
 })

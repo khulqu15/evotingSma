@@ -57,7 +57,9 @@
                         <h4>Visi</h4>
                     </div>
                 </div>
-                <div id="visi-text" class="pt-2 pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam inventore deleniti, maxime, dolorem placeat unde praesentium quos odio dolorum quisquam repudiandae incidunt asperiores iste consectetur veritatis tenetur ea temporibus esse omnis harum officiis. Voluptatum eligendi delectus autem illo. Iste!</div>
+                <div id="visi-text" class="pt-2 pb-5">
+                    Mohon tunggu sebentar...
+                </div>
             </div>
             <div class="col-md-12">
                 <div class="row">
@@ -66,12 +68,7 @@
                     </div>
                 </div>
                 <div id="misi-text">
-                    <ol class="pt-2 pb-5 pl-4">
-                        <li>Meningkatkan karakter siswa - siswi SMAN 1 Purwosari beriman serta taat kepada tuhan yang maha esa</li>
-                        <li>Mengembangkan rasa kekeluargaan dalam nasionalisme</li>
-                        <li>Meningkatkan kreatifitas siswa - siswi dalam berbahasa </li>
-                        <li>Menumbuhkan rasa peduli lingkungan kepada siswa - siswi SMAN 1 Purwosari</li>
-                    </ol>
+                    Mohon tunggu sebentar...
                 </div>
             </div>
         </div>
