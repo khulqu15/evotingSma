@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', function() {
-//     return redirect()->route('index');
-// });
+Route::get('/', function() {
+    return redirect()->route('index');
+});
 Route::get('index', [PageController::class, 'index'])->name('index');
 Route::get('start', [PageController::class, 'form'])->name('form');
 Route::post('user/voting', [VotersController::class, 'store'])->name('voters.create');
