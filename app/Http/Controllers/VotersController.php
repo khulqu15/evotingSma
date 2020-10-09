@@ -184,6 +184,6 @@ class VotersController extends Controller
             'code' => $e->getCode()
         ];
 
-        return redirect()->route('form')->with('failure', 'Anda sudah voting');
+        return redirect()->route('form')->with($arr['error']);
     }
 }
