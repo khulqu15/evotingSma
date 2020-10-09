@@ -47,25 +47,34 @@ class VotersController extends Controller
                 'jurusan' => 'nullable',
                 'profesi' => 'nullable',
             ]);
-            $voter = new Voters();
-            $voter->nis = $request->nis;
-            $voter->nip = $request->nip;
-            $voter->name = $request->name;
-            $voter->gender = $request->gender;
-            $voter->email = $request->email;
-            $voter->kelas = $request->kelas;
-            $voter->jurusan = $request->jurusan;
-            $voter->profesi = $request->profesi;
-            $voter->level = $request->level;
-            if($request->level == "Lainnya") {
-                $code_verify = Str::random(4);
-                $voter->email_verify = $code_verify;
-                $voter->save();
-                return redirect()->route('vote', ['id' => $voter->id, 'name' => str_replace(' ', '_', $voter->name)]);
-            }
-            else {
-                $voter->save();
-                return redirect()->route('vote', ['id' => $voter->id, 'name' => str_replace(' ', '_', $voter->name)]);
+            $user = Voters::where('email', $request->email)->first();
+            if($user == null) {
+                $voter = new Voters();
+                $voter->nis = $request->nis;
+                $voter->nip = $request->nip;
+                $voter->name = $request->name;
+                $voter->gender = $request->gender;
+                $voter->email = $request->email;
+                $voter->kelas = $request->kelas;
+                $voter->jurusan = $request->jurusan;
+                $voter->profesi = $request->profesi;
+                $voter->level = $request->level;
+                if($request->level == "Lainnya") {
+                    $code_verify = Str::random(4);
+                    $voter->email_verify = $code_verify;
+                    $voter->save();
+                    return redirect()->route('vote', ['id' => $voter->id, 'name' => str_replace(' ', '_', $voter->name)]);
+                }
+                else {
+                    $voter->save();
+                    return redirect()->route('vote', ['id' => $voter->id, 'name' => str_replace(' ', '_', $voter->name)]);
+                }
+            } else {
+                if($user->vote_id == null) {
+                    return redirect()->route('vote', ['id' => $user->id, 'name' => str_replace(' ', '_', $user->name)]);
+                } else {
+                    return redirect()->back()->with('failure', "Anda sudah melakukan voting");
+                }
             }
         } catch (\Exception $e) {
             return $this->exceptionHandle($e);
@@ -122,7 +131,7 @@ class VotersController extends Controller
     public function showApi($id)
     {
         $voter = Voters::find($id);
-        return response()->json([
+         return response()->json([
             'success' => true,
             'voter' => $voter
         ]);
