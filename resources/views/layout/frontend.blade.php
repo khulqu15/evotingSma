@@ -48,16 +48,14 @@
 
 
     @if (\Route::current()->getName() == 'index')
-    <footer class="p-absolute b-0">
-        <div class="mx-4">
-            <div class="row pb-3 pl-4">
-                <div class="col-md-12 text-white">
-                    <img src="img/team.png" width="40px" alt="">
-                    @2020 Developed by <a class="text-white" href="https://www.instagram.com/sidescript_dev/">SideScript Developer</a>
-                </div>
+    <div class="container-fluid p-3 pb-5 px-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('img/developer.png') }}" class="mr-2" width="30px" alt="">
+                @2020 Developed by <a href="https://www.instagram.com/sidescript_dev/">SideScript Developer</a>
             </div>
         </div>
-    </footer>
+    </div>
     @else
     <div class="container-fluid p-3 pb-5 px-5">
         <div class="row">
