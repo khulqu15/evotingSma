@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body class="{{ \Route::current()->getName() == 'index' ? 'bg-home' : '' }}">
+<body>
     @if (\Session::has('failure'))
     <div class="position-fixed w-100 alert text-white alert-danger malert alert-dismissible fade show" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
