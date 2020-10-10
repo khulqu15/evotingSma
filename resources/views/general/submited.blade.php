@@ -11,7 +11,7 @@
             </div>
             <div class="text-center respond-text">
                 <h5 class="text-primary mt-4">Sesi Voting Sudah Habis.</h5>
-                <p>Pengumuman akan dishare melalui ig kami di <a href="https://www.instagram.com/osismpksmanesa/">Official Osis Smanesa</a></p>
+                <p>Pengumuman akan kami share melalui ig di <a href="https://www.instagram.com/osismpksmanesa/">osismpksmanesa</a></p>
             </div>
         </div>
     </div>
